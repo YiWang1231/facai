@@ -1,0 +1,26 @@
+{
+  "api": {
+    "priceApi": "https://blz.bicoin.com.cn/data/getAllPriceRate",
+    "userData": "https://blz.bicoin.com.cn/firmOffer/getUserAccountInfo?userId=",
+    "userDealRecordApi": "https://blz.bicoin.com.cn/settingFirmOffer/getUserLeaderList"
+  },
+  "headers": {
+    "HOST": "blz.bicoin.com.cn",
+    "from": "iOS",
+    "type": "3",
+    "Accept-Encoding": "gzip, deflate, br",
+    "token": "68bf8fc55874123b10e25e1559757b76",
+    "redRiseGreenDown": "2",
+    "User-Agent": "Blirod/1.6.5 (iPhone; iOS 13.1; Scale/3.00)",
+    "Cookie": ""
+  },
+  "parseUsersId": {
+    "eos": "97"
+  },
+  "params": {
+    "pageNum": "1",
+    "pageSize": "10",
+    "showType": "3",
+    "typeStr": ""
+  }
+}
