@@ -37,7 +37,7 @@ class UserDealRecord(object):
         self.sym = sym
         self.informTime = informTime
 
-    def position2dict(self):
+    def record2dict(self):
         return {
             'content': self.content,
             'label': self.label,
@@ -59,4 +59,24 @@ def create_record(data):
         data["labelSub"][0],
         data['sym'],
         data['informTime']
+    )
+
+
+class UserPositionStatus(object):
+
+    def __init__(self, ratio, symbol):
+        self.ratio = ratio
+        self.symbol = symbol
+
+    def status2dict(self):
+        return {
+            'ratio': self.ratio,
+            'symbol': self.symbol
+        }
+
+
+def create_status(data):
+    return UserPositionStatus(
+        data['ratio'],
+        data['symbol']
     )

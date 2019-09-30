@@ -1,9 +1,9 @@
 from datetime import datetime
-from app.scripts.positions import output_positions
+from app.scripts.parse_positions import output_positions
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 
-def position_time_task(interval, task, args):
+def time_task(interval, task, args):
     scheduler = BlockingScheduler()
     scheduler.add_job(func=task, args=(args,), trigger='interval', seconds=interval, next_run_time=datetime.now(), id='position_task')
     try:
