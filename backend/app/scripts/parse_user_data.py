@@ -2,9 +2,7 @@ from datetime import datetime
 import requests
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-from app.model import create_record
-from app.model import create_position
-from app.model import create_status
+from app.model import create_status, create_position, create_record
 from app.util.get_config import get_config
 
 
@@ -14,13 +12,31 @@ class Singleton(object):
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
             cls._instance = super(Singleton, cls).__new__(cls)
-            return cls._instance
+        return cls._instance
 
 
 class UserData(Singleton):
 
     def __init__(self, user_id):
         self.id = user_id
+
+    def normalize_status(self, status):
+        ret_status = []
+        for item in status:
+            ret_status.append(create_status(item).data2dict())
+        return ret_status
+
+    def normalize_position(self, positions):
+        ret_positions = []
+        for item in positions:
+            ret_positions.append(create_position(item).data2dict())
+        return ret_positions
+
+    def normalize_record(self, records):
+        ret_records = []
+        for item in records:
+            ret_records.append(create_record(item).data2dict())
+        return ret_records
 
     def get_user_data(self):
         config = get_config()  # 读取配置文件
@@ -39,15 +55,9 @@ class UserData(Singleton):
         status = res_user_data['data']['ratioMap']
         positions = res_user_data['data']['futurePosition']
         records = res_deal_record['data']['firmOfferHisList']
-        ret_status = []
-        for item in status:
-            ret_status.append(create_status(item).status2dict())
-        ret_positions = []
-        for item in positions:
-            ret_positions.append(create_position(item).position2dict())
-        ret_records = []
-        for item in records:
-            ret_records.append(create_record(item).record2dict())
+        ret_status = self.normalize_status(status)
+        ret_positions = self.normalize_position(positions)
+        ret_records = self.normalize_record(records)
         user_dict = {
             'time': datetime.now(),
             'id': self.id,
@@ -57,7 +67,6 @@ class UserData(Singleton):
             'positions': ret_positions,
             'records': ret_records
         }
-        print(user_dict)
         return user_dict
 
     def auto_output(self):
@@ -68,7 +77,14 @@ class UserData(Singleton):
         except:
             pass
 
+    def display(self):
+        return id(self), self.id
+
 
 if __name__ == "__main__":
-    user = UserData(97)
-    user.auto_output()
+    user1 = UserData(97)
+    print(user1.get_user_data())
+    # user1 = UserData(97)
+    # user2 = UserData(98)
+    # print(user1.display())
+    # print(user2.display())

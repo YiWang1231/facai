@@ -1,19 +1,19 @@
-class UserPositon(object):
+class Essential(object):
+
+    def data2dict(self):
+        dict = {}
+        for name, value in vars(self).items():
+            dict[name] = value
+        return dict
+
+
+class UserPositon(Essential):
     def __init__(self, instrumentId, tradingOn, amount, qty, pnlRatio):
         self.instrumentId = instrumentId  # 仓位描述
         self.tradingOn = tradingOn  # 仓位货币
         self.amount = amount  # 货币数量
         self.qty = qty  # 张数
         self.pnlRatio = pnlRatio  # 持有比例变化
-
-    def position2dict(self):
-        return {
-            'instrumentId': self.instrumentId,
-            'tradingOn': self.tradingOn,
-            'amount': self.amount,
-            'qty': self.qty,
-            'pnlRatio': self.pnlRatio
-        }
 
 
 # 构造UserPosition
@@ -27,7 +27,7 @@ def create_position(data):
     )
 
 
-class UserDealRecord(object):
+class UserDealRecord(Essential):
     def __init__(self, content, label, exch, unit, labelSub, sym, informTime):
         self.content = content
         self.label = label
@@ -36,17 +36,6 @@ class UserDealRecord(object):
         self.labelSub = labelSub
         self.sym = sym
         self.informTime = informTime
-
-    def record2dict(self):
-        return {
-            'content': self.content,
-            'label': self.label,
-            'exch': self.exch,
-            'unit': self.unit,
-            'labelSub': self.labelSub,
-            'sym': self.sym,
-            'informTime': self.informTime
-        }
 
 
 # 构造UserDealRecord
@@ -62,17 +51,12 @@ def create_record(data):
     )
 
 
-class UserPositionStatus(object):
+class UserPositionStatus(Essential):
+    fields = ['ratio', 'symbol']
 
     def __init__(self, ratio, symbol):
         self.ratio = ratio
         self.symbol = symbol
-
-    def status2dict(self):
-        return {
-            'ratio': self.ratio,
-            'symbol': self.symbol
-        }
 
 
 def create_status(data):
@@ -80,3 +64,13 @@ def create_status(data):
         data['ratio'],
         data['symbol']
     )
+
+
+if __name__ == "__main__":
+    data = {
+        'ration': 0.6,
+        'symbol': 'BTC'
+    }
+    print(data['ration'])
+    ps = UserPositionStatus(data)
+    print(ps.data2dict())

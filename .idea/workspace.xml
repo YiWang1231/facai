@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e3a978-1f48-4759-9760-1440242764ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/app/scripts/parse_user_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/api/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/api/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/scripts/auto_get_user_position.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/scripts/positions.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/scripts/parse_positions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/scripts/records.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/scripts/parse_records.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/util/ex.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/util/get_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/util/get_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/util/time_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/util/time_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/scripts/parse_user_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/scripts/parse_user_data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +26,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1RCJSH5ZvcOGN91RqcUdm6oquH1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -57,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_config">
+  <component name="RunManager" selected="Python.userdata">
     <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="facai" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="facai" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,12 +81,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app/util" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app/scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/ex.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/scripts/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,6 +117,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="facai" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="userdata" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="facai" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,35 +161,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="users" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="facai" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app/api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/api/users.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.userdata" />
+        <item itemvalue="Python.model" />
+        <item itemvalue="Python.ex" />
         <item itemvalue="Python.get_config" />
         <item itemvalue="Python.config" />
-        <item itemvalue="Python.users" />
-        <item itemvalue="Python.ex (1)" />
-        <item itemvalue="Python.userdata" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +188,7 @@
       <workItem from="1569510182994" duration="2475000" />
       <workItem from="1569551302944" duration="604000" />
       <workItem from="1569821803903" duration="14866000" />
+      <workItem from="1569850631631" duration="8218000" />
     </task>
     <servers />
   </component>
@@ -215,14 +209,15 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/facai$userdata.coverage" NAME="userdata Coverage Results" MODIFIED="1569838649608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/scripts" />
+    <SUITE FILE_PATH="coverage/facai$userdata.coverage" NAME="userdata Coverage Results" MODIFIED="1569939221860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/scripts" />
     <SUITE FILE_PATH="coverage/facai$ex__1_.coverage" NAME="ex (1) Coverage Results" MODIFIED="1569838850286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/util" />
     <SUITE FILE_PATH="coverage/facai$time_task.coverage" NAME="time_task Coverage Results" MODIFIED="1569236350425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/util" />
-    <SUITE FILE_PATH="coverage/facai$ex.coverage" NAME="ex Coverage Results" MODIFIED="1569513603270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/util" />
+    <SUITE FILE_PATH="coverage/facai$ex.coverage" NAME="ex Coverage Results" MODIFIED="1569936174926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/scripts" />
     <SUITE FILE_PATH="coverage/facai$get_deal_record.coverage" NAME="get_deal_record Coverage Results" MODIFIED="1569168126628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/util" />
     <SUITE FILE_PATH="coverage/facai$manage.coverage" NAME="manage Coverage Results" MODIFIED="1569165687652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/facai$config.coverage" NAME="config Coverage Results" MODIFIED="1569849510747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/facai$get_config.coverage" NAME="get_config Coverage Results" MODIFIED="1569849937946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/util" />
+    <SUITE FILE_PATH="coverage/facai$model.coverage" NAME="model Coverage Results" MODIFIED="1569938157503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
     <SUITE FILE_PATH="coverage/facai$ping.coverage" NAME="ping Coverage Results" MODIFIED="1569165709993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/api" />
     <SUITE FILE_PATH="coverage/facai$users.coverage" NAME="users Coverage Results" MODIFIED="1569849415150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app/api" />
   </component>
